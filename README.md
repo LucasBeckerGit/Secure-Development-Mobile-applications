@@ -49,12 +49,12 @@ The Android Native Devlopment Kit (NDK) allows you to write code in C/C++, and c
 The good news is that NDK libraries can’t be decompiled making the information harder to find.
 The NDK compiled code can still be opened with a hexidecimal editor but by the nature of the API key they are harder to pick out in a hexidecimal editor.
 
-1
-![C++ template](/screenshots/1.png)
+
+!(/screenshots/1.png)
 
 I 'hid' the API URLs here.
 
-![C++ template](/screenshots/2.png)
+![API URLs](/screenshots/2.png)
 
 
 Another attack to discover the API URLs could be through a MITM attack. But I used HTTPS.
@@ -62,13 +62,13 @@ About the safety of the implementation of HTTPS : It is secure because inside An
 that are in the phone by default. So it is not possible to send a fake certificate because an error would be thrown because it is not from a known CA.
 
 
-![C++ template](/screenshots/3.png)
+![Certificate HTTPS](/screenshots/3.png)
 
 
 Thank's to HTTPS, the URL of the API is hidden. No MITM attack is possible to find the API URLs.
 I used HttpsURLConnection.
 
-![C++ template](/screenshots/4.png)
+![HttpsURLConnection](/screenshots/4.png)
 
 
 I just answered the question on how I hide the API url.
@@ -78,9 +78,9 @@ To do so, I used fingerprint recognition. Thank's to the latests Android version
 We no longer need to create our own authentication UI. The library provides a standard and familiar UI that matches a user’s biometric authentication form factor.
 I used the library "androidx.biometric:biometric:1.1.0" and especially the object BiometricPrompt. 
 
-![C++ template](/screenshots/screen1.png)
+![login page](/screenshots/screen1.png)
 
-![C++ template](/screenshots/screen2.png)
+![authenticated](/screenshots/screen2.png)
 
 
 I cannot take a screenshot while the BiometricPrompt is launched.
@@ -90,38 +90,41 @@ Another key element of the app is how to securely store data to be able to acces
 I used SharedPreferences because this is what you should use when you have key-value data.
 The probleme is that it is not encrypted. 
 
-![C++ template](/screenshots/5.png)
+![EncryptedSharedPreferences](/screenshots/5.png)
 
 
 But an implementation of SharedPreferences that encrypts keys and values exists : EncryptedSharedPreferences.
 It uses the Android Keystore which is a system that lets you store cryptographic keys in a container to make it more difficult to extract from the device.
 
-![C++ template](/screenshots/6.png)
+![EncryptedSharedPreferences](/screenshots/6.png)
 
 
 After that, the SharedPreferences file is encrypted and you cannot read from it unless you are in the app.
 
-![C++ template](/screenshots/7.png)
+![Encrypted file](/screenshots/7.png)
 
 
 I also obfuscated my code with gradle and the R8 compiler. 
 The R8 compiler does : 
+
 -Code shrinking
+
 -Resource shrinking
+
 -Obfuscation
+
 -Optimization
 
-![C++ template](/screenshots/8.png)
+![R8 compiler](/screenshots/8.png)
 
 
 To finish, I submitted to apk in my Github. One which is the debug apk and the release apk which is more secure because it is signed.
 Because when you are generating signed APK files, it is secured by a Keystore credential made by the developer and includes a password for the security purpose.
 Therefore, Signed APK cannot be easily unzipped and mainly used for production purposes.
 
-![C++ template](/screenshots/9.png)
+![Key store](/screenshots/9.png)
 
-![C++ template](/screenshots/10.png)
-
+![Release APK](/screenshots/10.png)
 
 
 Apart from the security issues, I had the opportunity through this project to improve enormously on my abilities to develop. 
@@ -129,9 +132,9 @@ I had to use the AsyncTask and understand the notions around threads to make req
 I also implemented a spinner with a listener to facilitate the choice of users.
 I also had to implement a scroll view to display all the different bank accounts of each person.
 
-![C++ template](/screenshots/screen3.png)
+![Home page](/screenshots/screen3.png)
 
-![C++ template](/screenshots/screen4.png)
+![Home page updated](/screenshots/screen4.png)
 
 
 
