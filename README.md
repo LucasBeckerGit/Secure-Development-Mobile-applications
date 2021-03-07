@@ -88,7 +88,7 @@ I cannot take a screenshot while the BiometricPrompt is launched.
 
 Another key element of the app is how to securely store data to be able to access the app without Internet.
 I used SharedPreferences because this is what you should use when you have key-value data.
-The probleme is that it is not encrypted. 
+The problem is that it is not encrypted. 
 
 ![EncryptedSharedPreferences](/screenshots/5.png)
 
