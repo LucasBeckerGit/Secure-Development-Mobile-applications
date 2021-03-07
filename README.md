@@ -50,7 +50,7 @@ The good news is that NDK libraries can’t be decompiled making the information
 The NDK compiled code can still be opened with a hexidecimal editor but by the nature of the API key they are harder to pick out in a hexidecimal editor.
 
 
-!(/screenshots/1.png)
+![Template C++](/screenshots/1.png)
 
 I 'hid' the API URLs here.
 
@@ -172,14 +172,3 @@ I used NDK and put the URLs on a cpp file.
 
 
 Thank you for this project, it was interesting !
-
-
-
-
-
-
-
-
-
-
- 
