@@ -5,7 +5,9 @@ The lab3 pratical course project
 The goal of the project is to create the most secure bank application possible.
 
 I gathered information about the security of Android on their developer website and source website : 
+
 https://developer.android.com/
+
 https://source.android.com/
 
 
