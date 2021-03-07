@@ -147,28 +147,28 @@ To sum up :
 
 ### Requirements
 - This application must be available offline.
-Yes it is, thanks to EncryptedSharedPreferences.
+- Yes it is, thanks to EncryptedSharedPreferences.
 
 - A refresh button allows the user to update its accounts.
-Yes, it refreshes all the users and their accounts and put the data in the EncryptedSharedPreferences file.
+- Yes, it refreshes all the users and their accounts and put the data in the EncryptedSharedPreferences file.
 
 - Access to the application is restricted 
-Yes, through the fingerprint recognition. Only the user of the phone can use the app.
+- Yes, through the fingerprint recognition. Only the user of the phone can use the app.
 
 - Exchanges with API must be secure ( with TLS)
-Yes, I used HttpsURLConnection and the certificate is from a known CA.
+- Yes, I used HttpsURLConnection and the certificate is from a known CA.
 
 
 ### README.md content
 
 - Explain how you ensure user is the right one starting the app
-Through the fingerprint recognition.
+- Through the fingerprint recognition.
 
 - How do you securely save user's data on your phone ?
-With the EncryptedSharedPreferences file.
+- With the EncryptedSharedPreferences file.
 
 - How did you hide the API url ?
-I used NDK and put the URLs on a cpp file.
+- I used NDK and put the URLs on a cpp file.
 
 
 Thank you for this project, it was interesting !
